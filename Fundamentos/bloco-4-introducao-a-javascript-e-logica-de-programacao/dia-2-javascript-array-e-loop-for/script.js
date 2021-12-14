@@ -17,6 +17,10 @@ console.log(`A soma de todos os numeros é: ${soma}`);
 
 //* 3 - Para o terceiro exercício, calcule e imprima a média aritmética dos valores contidos no array;
 
+let media = soma / numbers.length;
+
+console.log(`A média ds números é: ${media}`);
+
 //* 4 - A média aritmética é o resultado da soma de todos os elementos divido pelo número total de elementos.
 
 //* 5 - Utilizando for , descubra qual o maior valor contido no array e imprima-o;
