@@ -36,10 +36,46 @@ if (media > 20) {
 
 //* 5 - Utilizando for , descubra qual o maior valor contido no array e imprima-o;
 
+let maior = numbers[0];
+for (let i = 0; i < numbers.length; i += 1) {
+  if (numbers[i] > maior) {
+    maior = numbers[i];
+  }
+}
+console.log(`O maior valor contido é: ${maior}`);
+
 //* 6 - Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
+
+let impar = 0;
+for (let i = 0; i < numbers.length; i += 1) {
+  if (numbers[i] % 2 === 1) {
+    impar += 1;
+  }
+}
+console.log(`Possui ${impar} números ímpares.`);
 
 //* 7 - Utilizando for , descubra qual o menor valor contido no array e imprima-o;
 
+let menor = numbers[0];
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] < menor) {
+    menor = numbers[i]
+  }
+}
+
+console.log(`O menor valor contido é: ${menor}`);
+
 //* 8 - Utilizando for , crie um array que vá de 1 até 25 e imprima o resultado;
 
+let arrNum = [];
+for (let i = 1; i <= 25; i += 1) {
+  arrNum.push(i);
+}
+
+console.log(`O array criado: ${arrNum}`);
+
 //* 9 - Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 .
+
+for (let i = 0; i < arrNum.length; i += 1) {
+  console.log(`A divisãd de ${arrNum[i]} por 2 é: ${arrNum[i] / 2}`);
+}
