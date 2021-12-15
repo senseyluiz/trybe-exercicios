@@ -40,7 +40,10 @@ main.appendChild(rightContent)
 
 // 7 - Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do section criado no passo 5;
 
-
+let contentLeft = document.querySelector(".left-content")
+let imagem = document.createElement("img");
+imagem.src = 'https://picsum.photos/200';
+contentLeft.appendChild(imagem)
 
 
 // 8 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
