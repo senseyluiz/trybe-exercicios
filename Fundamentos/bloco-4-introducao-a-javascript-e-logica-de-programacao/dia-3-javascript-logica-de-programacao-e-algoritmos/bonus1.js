@@ -35,3 +35,28 @@ for (let i = 0; i < n; i++) {
 }
 
 console.log("-----------------/////------------------");
+
+
+
+//Agora inverta o lado do triângulo. Por exemplo:
+
+//     *
+//    **
+//   ***
+//  ****
+// *****
+
+linha = "";
+let pos = n;
+for (let l = 0; l < n; l++) {
+  for (let c = 0; c < n; c++) {
+    if (c < pos) {
+      linha += " ";
+    } else {
+      linha += "*";
+    }
+  }
+  console.log(linha);
+  linha = "";
+  pos -= 1;
+}
