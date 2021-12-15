@@ -8,6 +8,10 @@ body.appendChild(titulo)
 
 // 2 - Adicione a tag main com a classe main-content como filho da tag body ;
 
+let mainContent = document.createElement("main");
+mainContent.className = 'main-content';
+body.appendChild(mainContent);
+
 
 
 // 3 - Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
