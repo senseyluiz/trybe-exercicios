@@ -73,3 +73,26 @@ function maiorValor(arr) {
 console.log(maiorValor([2, 4, 6, 7, 10, 0, -3]));
 
 console.log('-----------------------////-----------------------');
+
+
+console.log('Exercício 4');
+
+
+// * Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+// Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']; .
+// Valor esperado no retorno da função: Fernanda .
+
+
+function nomeMaior(arrNome) {
+  //let nomeMaior = arrNome[0];
+  for (nome of arrNome) {
+    if (nome.length > nomeMaior.length) {
+      nomeMaior = nome;
+    }
+  }
+  return nomeMaior;
+}
+
+console.log(nomeMaior(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+console.log('-----------------------////-----------------------');
