@@ -162,5 +162,14 @@ console.log('Exercício 7');
 // verificaFimPalavra('joaofernando', 'fernan') ;
 // Retorno esperado: false
 
+function finalString(word, ending) {
+  let diferenca = word.length - ending.length;
+  if (word.slice(diferenca) === ending) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
+console.log(finalString("carro", 'rro'));
 console.log('-----------------------////-----------------------');
