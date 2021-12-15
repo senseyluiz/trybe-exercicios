@@ -18,4 +18,20 @@ for (let i = 0; i < n; i++) {
 }
 
 
-//
+//Para o segundo exercício, faça o mesmo que antes, mas que imprima um triângulo retângulo com 5 asteriscos de base. Por exemplo:
+
+// *
+// **
+// ***
+// ****
+// *****
+console.log("-----------------/////------------------");
+
+linha = "";
+
+for (let i = 0; i < n; i++) {
+  linha += "*";
+  console.log(linha);
+}
+
+console.log("-----------------/////------------------");
