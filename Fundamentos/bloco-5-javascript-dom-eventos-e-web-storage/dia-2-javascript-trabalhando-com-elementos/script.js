@@ -27,7 +27,9 @@ centerContent.appendChild(texto)
 
 
 // 5 - Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
-
+let leftContent = document.createElement("section");
+leftContent.className = "left-content";
+main.appendChild(leftContent)
 
 
 // 6 -Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
