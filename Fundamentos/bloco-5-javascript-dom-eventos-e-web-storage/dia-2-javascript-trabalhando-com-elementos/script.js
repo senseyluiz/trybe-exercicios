@@ -83,7 +83,7 @@ for (let i = 0; i < h3S.length; i++) {
 }
 
 // 3 - Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
-
+main.removeChild(contentLeft);
 
 
 
