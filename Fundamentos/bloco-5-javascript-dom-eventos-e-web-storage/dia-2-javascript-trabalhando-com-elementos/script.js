@@ -96,3 +96,7 @@ let contentCenter = document.querySelector('.center-content');
 contentCenter.style.backgroundColor = 'green';
 
 // 6 - Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+
+let ul = document.querySelector("ul");
+ul.lastChild.remove();
+ul.lastChild.remove();
