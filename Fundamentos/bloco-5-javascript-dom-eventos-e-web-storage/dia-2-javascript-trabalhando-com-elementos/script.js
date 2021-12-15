@@ -70,6 +70,8 @@ for (let i = 0; i < 3; i++) {
 
 // 1 - Adicione a classe title na tag h1 criada;
 
+let h1 = document.querySelector("h1");
+h1.className = "title";
 
 
 // 2 - Adicione a classe description nas 3 tags h3 criadas;
