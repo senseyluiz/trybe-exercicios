@@ -58,6 +58,11 @@ for (let i = 0; i < numeros.length; i += 1) {
 contentRight.appendChild(criaUl)
 
 // 9 -- Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
+for (let i = 0; i < 3; i++) {
+  let criaH3 = document.createElement("h3");
+  criaH3.innerText = `Este é o subtítulo ${i + 1}`;
+  main.appendChild(criaH3);
+}
 
 
 
