@@ -170,3 +170,58 @@ ulDays.addEventListener('click', (e) => {
     e.target.style.color = 'red';
   }
 })
+
+
+// Bonus - Vamos adicionar compromissos ao seu calendário? Implemente uma função que, ao digitar um compromisso na caixa de texto "COMPROMISSOS", adiciona o item à lista "MEUS COMPROMISSOS" ao clicar no botão "ADICIONAR".
+// Se nenhum caractere for inserido no campo input , a função deve retornar um alert com uma mensagem de erro ao clicar em "ADICIONAR".
+// Ao pressionar a tecla "enter" o evento também deverá ser disparado.
+// Dica - Propriedade: key .
+let inputContainer = document.querySelector(".input-container");
+let inputCompromisso = document.querySelector("#task-input");
+let btnAdicionar = document.querySelector("#btn-add");
+
+let criaUl = document.createElement('ul')
+criaUl.className = 'compromissos';
+inputContainer.appendChild(criaUl);
+
+let ulCompromisso = document.querySelector('.compromissos');
+
+function compromisso() {
+  if (!inputCompromisso.value) {
+    alert("Por favor digite um compromisso.")
+  } else {
+    let criaCompromisso = document.createElement('li');
+    criaCompromisso.innerText = inputCompromisso.value;
+    ulCompromisso.appendChild(criaCompromisso);
+    inputCompromisso.value = ''
+  }
+
+}
+
+function compromissoEnter(e) {
+  if (e.which == 13) {
+    if (!inputCompromisso.value) {
+      alert("Por favor digite um compromisso.")
+    } else {
+      let criaCompromisso = document.createElement('li');
+      criaCompromisso.innerText = inputCompromisso.value;
+      ulCompromisso.appendChild(criaCompromisso);
+      inputCompromisso.value = '';
+    }
+  }
+
+}
+
+btnAdicionar.addEventListener('click', compromisso);
+btnAdicionar.addEventListener('keyup', (e) => {
+  if (e.which === 13) {
+    if (!inputCompromisso.value) {
+      alert("Por favor digite um compromisso.")
+    } else {
+      let criaCompromisso = document.createElement('li');
+      criaCompromisso.innerText = inputCompromisso.value;
+      ulCompromisso.appendChild(criaCompromisso);
+      inputCompromisso.value = '';
+    }
+  }
+});
