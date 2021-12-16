@@ -55,7 +55,7 @@ label {
 }
 
 .month-container {
-  background: green;
+  background: rgb(0, 128, 0);
   padding: 40px 25px;
   text-align: center;
 }
