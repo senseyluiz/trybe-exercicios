@@ -143,4 +143,19 @@ function legenda(cor) {
   minhasTarefas.appendChild(criaDiv);
 }
 
-legenda('blue');
+legenda('red');
+
+// 9 - Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
+// Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
+
+function seleciona(e) {
+  if (e.target.className === 'task selected') {
+    e.target.className = 'task';
+  } else if (e.target.innerText == 'MINHAS TAREFAS') {
+    e.target.className = '';
+
+  } else {
+    e.target.className = 'task selected'
+  }
+}
+minhasTarefas.addEventListener('click', seleciona)
