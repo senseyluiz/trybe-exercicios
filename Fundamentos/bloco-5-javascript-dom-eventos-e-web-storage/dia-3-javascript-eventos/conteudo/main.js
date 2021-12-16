@@ -46,6 +46,12 @@ myWebpage.addEventListener('dblclick', () => {
 
 // Segue abaixo um exemplo do uso de event.target:
 
+function mudaFundo(e) {
+  e.target.style.color = "blue";
+}
+
+myWebpage.addEventListener('mouseover', mudaFundo)
+
 
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
