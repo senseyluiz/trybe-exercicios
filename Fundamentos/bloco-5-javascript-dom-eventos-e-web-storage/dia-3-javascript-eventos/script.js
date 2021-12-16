@@ -24,17 +24,22 @@ createDaysOfTheWeek();
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
 let ulDays = document.querySelector("#days");
-for (let i = 0; i < dezDaysList.length; i += 1) {
-  let criaLi = document.createElement("li");
-  criaLi.innerHTML = dezDaysList[i];
-  criaLi.classList = "day";
-  if (dezDaysList[i] === 24 || dezDaysList[i] === 25 || criaLi.innerText === 31) {
-    criaLi.classList += " holiday";
-  }
 
-  if (dezDaysList[i] === 4 || dezDaysList[i] === 11 || dezDaysList[i] === 18 || dezDaysList[i] === 25) {
-    criaLi.classList += " friday";
-  }
+function criaCalendario() {
+  for (let i = 0; i < dezDaysList.length; i += 1) {
+    let criaLi = document.createElement("li");
+    criaLi.innerHTML = dezDaysList[i];
+    criaLi.classList = "day";
+    if (dezDaysList[i] === 24 || dezDaysList[i] === 25 || criaLi.innerText === 31) {
+      criaLi.classList += " holiday";
+    }
 
-  ulDays.appendChild(criaLi);
+    if (dezDaysList[i] === 4 || dezDaysList[i] === 11 || dezDaysList[i] === 18 || dezDaysList[i] === 25) {
+      criaLi.classList += " friday";
+    }
+
+    ulDays.appendChild(criaLi);
+  }
 }
+
+criaCalendario();
