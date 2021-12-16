@@ -37,6 +37,10 @@ input.addEventListener('keyup', (e) => {
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portifólio?
 
+myWebpage.addEventListener('dblclick', () => {
+  window.location.href = 'https://senseyluiz.github.io/'
+})
+
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
 
