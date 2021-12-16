@@ -43,3 +43,18 @@ function criaCalendario() {
 }
 
 criaCalendario();
+
+
+// 2 - Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
+// Adicione a este botão a ID "btn-holiday" .
+// Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
+
+let buttonsContainer = document.querySelector(".buttons-container");
+
+function feriados(feriados) {
+  let btnFeriado = document.createElement("button");
+  btnFeriado.id = "btn-holiday";
+  btnFeriado.innerHTML = "Feriados"
+  buttonsContainer.appendChild(btnFeriado);
+}
+feriados()
