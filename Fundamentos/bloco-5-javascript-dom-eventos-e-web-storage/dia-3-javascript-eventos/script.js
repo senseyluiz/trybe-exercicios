@@ -213,8 +213,8 @@ function compromissoEnter(e) {
 }
 
 btnAdicionar.addEventListener('click', compromisso);
-btnAdicionar.addEventListener('keyup', (e) => {
-  if (e.which === 13) {
+inputCompromisso.addEventListener('keyup', (e) => {
+  if (e.which == 13) {
     if (!inputCompromisso.value) {
       alert("Por favor digite um compromisso.")
     } else {
