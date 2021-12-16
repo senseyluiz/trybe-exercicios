@@ -41,7 +41,6 @@ function criaCalendario() {
     ulDays.appendChild(criaLi);
   }
 }
-
 criaCalendario();
 
 
@@ -58,3 +57,19 @@ function feriados(feriados) {
   buttonsContainer.appendChild(btnFeriado);
 }
 feriados()
+
+// 3 - Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday" .
+// É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
+
+let btnFeriado = document.querySelector("#btn-holiday");
+btnFeriado.addEventListener('click', () => {
+  for (let i = 0; i < ulDays.children.length; i++) {
+    if (ulDays.children[i].classList.contains('holiday')) {
+      if (ulDays.children[i].style.backgroundColor === 'red') {
+        ulDays.children[i].style.backgroundColor = "rgb(238,238,238)"
+      } else {
+        ulDays.children[i].style.backgroundColor = 'red'
+      }
+    }
+  }
+})
