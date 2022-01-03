@@ -77,13 +77,6 @@ const expectedResult = [
 
 function formatedBookNames() {
   // escreva seu código aqui
-  let livro = expectedResult.map((dados) => {
-    return {
-      name: dados.split("-")[0],
-      genre: dados.split('-')[1],
-      author: dados.split('-')[2]
-    };
-  });
-  return livro;
+  return books.map((book) => `${book.name} - ${book.genre} - ${book.author.name}`)
 }
 console.log(formatedBookNames());
