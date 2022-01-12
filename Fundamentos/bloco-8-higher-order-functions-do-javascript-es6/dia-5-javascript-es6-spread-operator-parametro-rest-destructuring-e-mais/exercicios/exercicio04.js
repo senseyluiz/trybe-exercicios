@@ -30,3 +30,6 @@ const people = [{
 ];
 
 // escreva filterPeople abaixo
+
+
+const filterPeople =
