@@ -10,8 +10,10 @@ const apli = () => {
       let arrayDados = dados.data;
       arrayDados.forEach((moeda, index) => {
         if (index < 10) {
+          let simbolo = moeda.symbol;
+          let precoUsd = Number(moeda.priceUsd)
           let criaLi = document.createElement("li");
-          criaLi.innerHTML = moeda.id;
+          criaLi.innerText = `${simbolo} : ${precoUsd.toFixed(2)}`;
           ul.appendChild(criaLi);
         }
       })
