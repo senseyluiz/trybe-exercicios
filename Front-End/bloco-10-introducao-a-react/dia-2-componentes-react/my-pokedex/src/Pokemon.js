@@ -1,17 +1,28 @@
 import React from 'react';
-
+import Pokedex from './Pokedex';
+import './Pokemon.css'
+import PropTypes from 'prop-types'
 class Pokemon extends React.Component{
   render(){
-    return (
-      <article key={this.props.id}>
+    const {imagemUrl, nome, tipo, peso, unidade, alternativo} = this.props;
 
-        <img src={this.props.image} alt = {this.name}/>
-        <h2> {this.props.name}</h2>
-        <h3> {this.props.type}</h3> 
-        <h3>{`Peso: ${this.props.averageWheight.value} ${this.props.averageWheight.measurementUnit}`}</h3> 
-
-      </article>
+    return(
+      <section className='card'>
+        <img src = {imagemUrl} alt={alternativo}/>
+        <h2>Nome: {nome}</h2>
+        <h3>Tipo: {tipo}</h3>
+        <h3>Peso: {peso}{unidade}</h3>
+      </section>
     )
   }
 }
+
+Pokemon.propTypes = {
+  imagemUrl: PropTypes.string,
+  nome: PropTypes.string,
+  tipo: PropTypes.string,
+  unidade: PropTypes.string,
+  peso: PropTypes.number,
+  alternativo: PropTypes.string
+};
 export default Pokemon;

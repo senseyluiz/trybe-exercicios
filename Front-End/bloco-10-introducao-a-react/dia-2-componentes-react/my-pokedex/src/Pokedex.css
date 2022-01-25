@@ -1,0 +1,7 @@
+section{
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: auto;
+}
