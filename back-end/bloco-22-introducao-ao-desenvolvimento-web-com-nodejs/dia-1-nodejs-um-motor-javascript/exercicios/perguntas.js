@@ -1,7 +1,7 @@
 const readline = require('readline-sync')
 
 const lerFloat = (Mensagem) =>{
-  return readline.questionInt(Mensagem)
+  return readline.questionFloat(Mensagem)
 } 
 const leiaPeso = () => {  
   return lerFloat("Digite seu peso: ");
