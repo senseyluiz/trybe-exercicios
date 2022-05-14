@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "sorteio": "node sorteio.js",
     "velocidade": "node velocidade.js",
     "imc": "node index.js",
     "start": "node index.js",
