@@ -1,35 +1,29 @@
-const calculaimc = require('./imc');
-const readline = require('readline-sync');
+const readlineSync = require('readline-sync')
 
-const peso = readline.questionInt('Digite seu peso: ');
-const altura = readline.questionFloat('Digite sua altura: ');
+console.log('[ 1 ] Calcular IMC\n',
+            '[ 2 ] Calcular Velocidade\n',
+            '[ 3 ] Sorteio de numeros');
 
-const imc = calculaimc(peso, altura);
-let mensagem = ""
+function main() {
+  const escolha = readlineSync.questionInt('Escolha uma opção: ');
 
-switch (true) {
-  case imc < 18,5:
-    mensagem = `ÌMC: ${imc}: Abaixo do peso (magreza)`
-    break;
+  switch (escolha) {
+    case 1:
+      require('./imc')
+      break;
 
-  case imc < 25:
-    mensagem = `ÌMC: ${imc}: Peso normal`
-    break;
+      case 2:
+      require('./velocidade')
+      break;
 
-  case imc < 30:
-    mensagem = `ÌMC: ${imc}: Sobrepeso`
-    break;
+      case 3:
+        require('./sorteio')
+      break;
 
-  case imc < 35:
-    mensagem = `ÌMC: ${imc}: Obesidade grau I`
-    break;
-
-  case imc < 40:
-    mensagem = `ÌMC: ${imc}: Obesidade grau II`
-    break;
-
-  default:
-    mensagem = `ÌMC: ${imc}: Obesidade grau III e IV`
-    break;
+    default:
+      console.log('Número inválido. Saindo')
+      break;
+  }
 }
-console.log(mensagem);
+
+main();
