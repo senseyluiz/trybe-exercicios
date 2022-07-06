@@ -4,3 +4,5 @@ enum estacoesAno {
   Outono = "Outono",
   Inverno = "Inverno"
 }
+
+export default estacoesAno;

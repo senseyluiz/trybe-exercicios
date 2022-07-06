@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var estacoesAno;
 (function (estacoesAno) {
     estacoesAno["Primavera"] = "Primavera";
@@ -6,3 +7,4 @@ var estacoesAno;
     estacoesAno["Outono"] = "Outono";
     estacoesAno["Inverno"] = "Inverno";
 })(estacoesAno || (estacoesAno = {}));
+exports.default = estacoesAno;

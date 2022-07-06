@@ -12,3 +12,5 @@ enum mesesAno {
   Novembro = "Novembro",
   Dezembro = "Dezembro",
 }
+
+export default mesesAno;
